@@ -1,0 +1,19 @@
+{
+  "name": "imagez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Zahrt",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.0.0",
+    "node-fetch": "^2.6.0"
+  }
+}
