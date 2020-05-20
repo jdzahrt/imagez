@@ -15,6 +15,7 @@ export const uploadImage = async (bucketName, filename) => {
         },
     });
 
-    console.log(`Image: ${filename} uploaded to Bucket: ${bucketName}.`);
+    console.log(`Image "${filename}" uploaded successfully to bucket "${bucketName}"`);
 }
 
+//uploadImage('mdm_distr_bucket', './images/BLTEST.jpeg')

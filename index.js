@@ -1,10 +1,17 @@
-import {downloadImage} from './download-image.js';
-import {uploadImage} from './upload-image.js';
+import {downloadImage} from './src/download-image.js';
+import {uploadImage} from './src/upload-image.js';
 
-async function main(sourceUri, destinationFile, bucketName) {
-    await downloadImage(sourceUri, destinationFile);
+const startImageProcess = async (sourceUri, destinationFile, bucketName) => {
+    try {
+        console.log('Downloading images.....');
+        await downloadImage(sourceUri, destinationFile);
 
-    await uploadImage(bucketName, destinationFile);
+        console.log('Uploading images.....');
+        await uploadImage(bucketName, destinationFile);
+    } catch (error) {
+        console.log('error', error);
+    }
 }
 
-main(...process.argv.slice(2))
+
+startImageProcess(...process.argv.slice(2));
